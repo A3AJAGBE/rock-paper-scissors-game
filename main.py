@@ -37,7 +37,7 @@ images = [rock, paper, scissors]
 
 choice = int(input("What is your choice? \n"))
 
-if choice > (len(images)-1):
+if choice > (len(images)-1) or choice < 0:
   print("Invalid Input\n")
 else:
   print(images[choice])
@@ -62,7 +62,7 @@ elif choice == 1 and random_choice == 1:
 else:
   print("You lose, Try Again!!!")
 
-  
+
 
 
 
