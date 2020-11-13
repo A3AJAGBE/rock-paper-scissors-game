@@ -33,36 +33,43 @@ print("Game Information: \nRock wins against scissors.\nScissors win against pap
 
 print("Instruction: Type 0 for Rock, 1 for Paper and 2 for Scissors\n")
 
+images = [rock, paper, scissors]
+
 choice = int(input("What is your choice? \n"))
 
-if choice == 0:
-  print(rock)
-elif choice == 1:
-  print(paper)
-elif choice == 2:
-  print(scissors)
+if choice > (len(images)-1):
+  print("Invalid Input\n")
+else:
+  print(images[choice])
 
-  print("Computer's choice: ")
-  random_choice = random.randint(0,2)
 
-  if random_choice == 0:
-    print(rock)
-  elif random_choice == 1:
-    print(paper)
-  else: 
-    print(scissors)
+print("Computer's choice: ")
+random_choice = random.randint(0,2)
+print(images[random_choice])
 
-  if choice == 0 and random_choice == 2:
-    print("You won")
-  elif choice == 2 and random_choice == 1:
-    print("You won")
-  elif choice == 1 and random_choice == 0:
-    print("You won")
-  else:
-    print("You lost, Try Again!!!")
+if choice == 0 and random_choice == 2:
+  print("You win")
+elif choice == 0 and random_choice == 0:
+  print("It's a draw, Try Again")
+elif choice == 2 and random_choice == 1:
+  print("You win")
+elif choice == 2 and random_choice == 2:
+  print("It's a draw, Try Again")
+elif choice == 1 and random_choice == 0:
+  print("You win")
+elif choice == 1 and random_choice == 1:
+  print("It's a draw, Try Again")
+else:
+  print("You lose, Try Again!!!")
 
-else: 
-  print("Wrong input!!!")
+  
+
+
+
+
+
+
+
 
 
 
