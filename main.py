@@ -14,31 +14,27 @@ print('Instruction: Type 0 for Rock, 1 for Paper and 2 for Scissors\n')
 images = [rock, paper, scissors]
 
 # User starts the game
-choice = int(input("What hand gesture is your choice? \n"))
+user_choice = int(input("What hand gesture is your choice? \n"))
 
 # Make sure the user input is valid
-if choice > (len(images) - 1) or choice < 0:
+if user_choice > (len(images) - 1) or user_choice < 0:
     print("Invalid hand gesture, read the game instruction above.\n")
 else:
-    print(images[choice])
+    print(images[user_choice])
 
-# Computer prompt
-print("Computer's choice: ")
-random_choice = random.randint(0, 2)
-print(images[random_choice])
+    # Computer prompt
+    print("Computer's choice: ")
+    random_choice = random.randint(0, 2)
+    print(images[random_choice])
 
-# Compare both choices to determine the winner
-if choice == 0 and random_choice == 2:
-    print("You win")
-elif choice == 0 and random_choice == 0:
-    print("It's a draw, Try Again")
-elif choice == 2 and random_choice == 1:
-    print("You win")
-elif choice == 2 and random_choice == 2:
-    print("It's a draw, Try Again")
-elif choice == 1 and random_choice == 0:
-    print("You win")
-elif choice == 1 and random_choice == 1:
-    print("It's a draw, Try Again")
-else:
-    print("You lose, Try Again!!!")
+    # Compare both choices to determine the winner
+    if user_choice == 0 and random_choice == 2:
+        print("You win")
+    elif user_choice == random_choice:
+        print("It's a draw, Try Again")
+    elif user_choice == 2 and random_choice == 1:
+        print("You win")
+    elif user_choice == 1 and random_choice == 0:
+        print("You win")
+    else:
+        print("You lose, Try Again!!!")
