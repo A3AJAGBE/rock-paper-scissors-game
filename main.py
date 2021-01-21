@@ -26,3 +26,19 @@ else:
 print("Computer's choice: ")
 random_choice = random.randint(0, 2)
 print(images[random_choice])
+
+# Compare both choices to determine the winner
+if choice == 0 and random_choice == 2:
+    print("You win")
+elif choice == 0 and random_choice == 0:
+    print("It's a draw, Try Again")
+elif choice == 2 and random_choice == 1:
+    print("You win")
+elif choice == 2 and random_choice == 2:
+    print("It's a draw, Try Again")
+elif choice == 1 and random_choice == 0:
+    print("You win")
+elif choice == 1 and random_choice == 1:
+    print("It's a draw, Try Again")
+else:
+    print("You lose, Try Again!!!")
